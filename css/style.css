@@ -1,0 +1,383 @@
+@charset 'utf-8';
+
+@font-face {
+	font-family: 'Dorado';
+	src: url(../assets/fonnts/Dorado.ttf);
+	
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+h2 {
+	font-family: 'Roboto';
+}
+
+button  {
+	color: #fff;
+	cursor: pointer;
+	border-radius: 4px;
+	text-align: center;
+	
+}
+
+body, #container::before {
+	background-image: url(../img/background.jpg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	font-family: 'Lato', sans-serif;
+	overflow: hidden;
+}
+
+main {
+	width: 100vw;
+	height: 100vh;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: no-wrap;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+}
+
+header {
+	text-align: center;
+}
+
+header h1 {
+	font-family: 'Ubuntu', sans-serif;
+	text-align: center;
+	font-size: 26px;
+	text-transform: uppercase;
+	margin-bottom: 50px;
+	color: #dadada;
+	letter-spacing: 5px;
+
+}
+
+header img {
+	
+	height: 100px;
+	vertical-align: baseline;
+}
+
+#container {
+	width: 90%;
+	overflow-x: auto;
+		
+}
+
+table {
+	width: 100%;
+	text-align: center;
+	border-collapse: collapse;
+	font-family: 'Lato', sans-serif;
+}
+
+th {
+	
+	background-color: rgba(25, 78, 83, 0.9);
+	font-weight: bold;
+	line-height: 35px;
+	padding: 5px 22px;
+	color: #fbfbfb;
+	cursor: pointer;
+	position: relative;
+}
+
+td {
+	padding: 15px 20px;
+}
+
+th.ascending::after, th.descending::after {
+	content: '';
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 5%;
+	border-style: solid;
+}
+
+th.ascending::after {
+	border-width: 0 4px 6px 4px;
+	border-color:  transparent transparent #9F9028 transparent;
+}
+
+th.descending::after {
+	border-width: 6px 4px 0 4px;
+	border-color: #9F9028 transparent transparent transparent;
+}
+
+tbody tr:nth-child(odd)  {
+
+	background-color: rgba(255, 255, 255, 0.9);
+}
+
+tbody tr:nth-child(even)  {
+	background-color: rgba(232, 232, 232, 0.9);
+}
+
+.del {
+	width: 26px;
+	height: 26px;
+	position: absolute;
+	right: calc(5% - 34px);
+	margin-top: 10px;
+	font-size: 18px;
+	font-weight: bold;
+	color: red;
+	margin-left: 4px;
+	background-color: rgba(255, 255, 255, 0.49);
+	border: 2px solid transparent;
+	transition: all 0.4s;
+	
+
+}
+.del:hover {
+	border: 2px solid #ff0000;
+	background-color: #fff;
+}
+
+#managment-players {
+	margin-top: 30px;
+	text-align: center;
+}
+
+.hide {
+	visibility: hidden;
+	opacity: 0;
+}
+
+.show {
+	visibility: visible;
+	opacity: 1;
+}
+
+#info-tournament {
+	position: absolute;
+	background-color: #fff;
+	bottom: 0;
+	left: -524px;
+	padding: 25px 35px;
+	transition: all 0.4s;
+	box-sizing: content-box;
+	
+}
+
+#info-tournament .info-tournament-content {
+	width: 450px;
+}
+
+#info-tournament, #info-tournament .info {
+	border: 2px solid #1d666d;
+}
+
+#info-tournament p {
+	margin-bottom: 10px;
+}
+
+
+#info-tournament .info {
+	position: absolute;
+	top: -2px;
+	right: -42px;
+	width: 40px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	background-color: #11809a;
+	color: #fffcfc;
+	border-left: 0;
+	border-radius: 0 10px 10px 0;	
+}
+
+#info-tournament .info i {
+	font-size: 24px;
+	width: 100%;
+	height: 100%;
+}
+
+
+
+#info-tournament:hover {
+	left: 0;
+}
+
+
+#managment-players form {
+	margin-top: 10px;
+	margin-bottom: 30px;
+	background-color: #516264;
+	padding: 15px 20px;
+	border-radius: 4px;
+}
+
+#managment-players form h2 {
+	font-size: 0px;
+}
+
+#managment-players form input, #managment-players form button {
+	border: 0;
+	padding: 5px 10px;	
+	font-size: 13px;
+	border-radius: 2px;
+}
+
+#managment-players form input {
+	color: #194e53;	
+	padding: 5px 10px;
+	margin-right: 5px;
+}
+
+#managment-players form input::placeholder {
+	color: rgba(119, 119, 119, 0.9);
+}
+
+#managment-players form button {
+	background-color: #37e637;
+	text-transform: uppercase;
+}
+
+.btn-player {
+	 background-color: rgba(25, 78, 83, 0.9);
+	 display: inline-block;
+	 padding: 15px 22px;
+	 font-size: 16px;
+	 border: 1px solid #ffffff;
+}
+
+ .btn-player i {
+	 display: inline-block;
+	 font-size: 20px;
+	 margin-right: 10px;
+}
+
+.new:hover {
+	 background-color: rgba(36, 144, 36, 0.9);
+}
+
+.rmv:hover  {
+	 background-color: rgba(222, 25, 25, 0.9);
+}
+
+#show-managment-round {
+	padding: 15px 42px;
+	background-color: rgba(255, 255, 255, 0.87);
+	border: 2px solid rgba(25, 78, 83, 0.9);
+	color: rgba(25, 78, 83, 0.9);
+	font-size: 18px;
+	transition: all 0.4s;
+}
+
+#show-managment-round:hover {
+	border: 2px solid orange;
+}
+
+#managment-round {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
+.close {
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	background-color: #fff;
+	border: none;
+	display: none;
+}
+
+.close i {
+	font-size: 20px;
+	color: #acacac;
+}
+
+#managment-round .managment-round-content {
+	width: 350px;
+	background-color: #fcfcfc;
+	text-align: center;
+	border-left: 2px solid orange;
+	border-top: 2px solid orange;
+	border-top-left-radius: 10px;
+	padding: 30px 35px 50px 35px;
+}
+
+.managment-round-content form h2 {
+	font-size: 26px;
+	font-weight: normal;
+	letter-spacing: 2px;
+}
+
+.managment-round-content form select {
+	width: 100%;
+	height: 30px;
+	border:  1px solid orange;
+	display: block;
+	margin: 20px auto;
+	font-size: 14px;
+	
+}
+
+.managment-round-content .person {
+	margin-bottom: 20px;
+}
+
+.managment-round-content .person span.name-person{
+	display: inline-block;
+	text-align: left;
+	width: 80%;
+	margin-right: 0px;
+}
+
+.managment-round-content .person input {
+	width: 26px;
+	height: 26px;
+	font-size: 14px;
+	border: 1px solid #d2d7d8;
+	border-radius: 2px;
+}
+
+.managment-round-content button#save-round {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	
+	background-color:  #eb9800;
+	font-size: 15px;
+	border: none;
+	border-radius: 0;
+}
+
+input[type=number] {
+	text-align: center;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+
+
+
+
+
+
+

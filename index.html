@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Turniej golfa</title>
+
+
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto:400,700|Ubuntu:400,700" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	<!-- Main styles	-->
+	<link rel="stylesheet" href="css/style.css">
+	<!-- Responsive styles	-->
+	<link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+	<main>
+		<header>
+		   <img src="img/logo.svg" alt="złoty puchar"  height="301"> 
+			<h1>Turniej Golfowy</h1>
+		</header>
+		<div id="container">
+
+				<table id="tournament-table">
+					<thead>
+						<tr>
+							
+							<th class="ascending">Lokata</th>
+							<th>Imie</th>
+							<th>Nazwisko</th>
+							<th class='hole'>d1</th>
+							<th class='hole'>d2</th>
+							<th class='hole'>d3</th>
+							<th class='hole'>d4</th>
+							<th class='hole'>d5</th>
+							<th class='hole'>d6</th>
+							<th class='hole'>d7</th>
+							<th class='hole'>d8</th>
+							<th class='hole'>d9</th>
+							<th class='hole'>d10</th>
+							<th class='hole'>d11</th>
+							<th class='hole'>d12</th>
+							<th>wynik</th>
+							
+				
+						</tr>
+					</thead>
+					<tbody>
+						
+						<tr>	
+							
+							<td></td>
+							<td>Bartłomiej</td>
+							<td>Andrusiewicz</td>
+							<td>0</td>
+							<td>2</td>
+							<td>-1</td>
+							<td>3</td>
+							<td>3</td>
+							<td>-2</td>
+							<td>0</td>
+							<td>0</td>
+							<td>4</td>
+							<td>5</td>
+							<td>5</td>
+							<td>1</td>
+							<td></td>
+					
+						</tr>
+						
+					
+						<tr>
+							<td></td>
+							<td>Anna</td>
+							<td>Kowalska</td>
+							<td>1</td>
+							<td>1</td>
+							<td>-1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>3</td>
+							<td>2</td>
+							<td>3</td>
+							<td>1</td>
+							<td>1</td>
+							<td>-2</td>
+							<td></td>
+						</tr>
+	
+						<tr>
+							<td></td>
+							<td>Andrzej</td>
+							<td>Sienkiewicz</td>
+							<td>2</td>
+							<td>2</td>
+							<td>0</td>
+							<td>1</td>
+							<td>-1</td>
+							<td>2</td>
+							<td>-1</td>
+							<td>-1</td>
+							<td>5</td>
+							<td>2</td>
+							<td>1</td>
+							<td>3</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>Marcin</td>
+							<td>Dudko</td>
+							<td>1</td>
+							<td>1</td>
+							<td>1</td>
+							<td>0</td>
+							<td>3</td>
+							<td>-1</td>
+							<td>2</td>
+							<td>2</td>
+							<td>2</td>
+							<td>4</td>
+							<td>4</td>
+							<td>1</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>Ola</td>
+							<td>Zapotoczna</td>
+							<td>3</td>
+							<td>2</td>
+							<td>3</td>
+							<td>3</td>
+							<td>1</td>
+							<td>1</td>
+							<td>-1</td>
+							<td>3</td>
+							<td>2</td>
+							<td>4</td>
+							<td>1</td>
+							<td>0</td>
+							<td></td>
+						</tr>
+					</tbody>
+				
+				</table>
+				
+				
+			</div>
+			
+			<aside id="info-tournament">
+				
+					<button class="info">
+						<i class="fas fa-info"></i>
+					</button>
+					<div class="info-tournament-content">
+					<button class="close"><i class="fas fa-times"></i></button>
+					<p>Kolumny d1-d12 przechowują liczbę punktów poniżej/powyżej przewidzianej normy uderzeń dla danego dołka. </p>
+					<p>Zwodnik w poszczególnym dołku może uzyskać wynik w przedziale od -5 do 10</p>
+					<p>Zwycięża zwodnik mający najmniejszy wynik(najmniejszą liczbę uderzeń)</p>
+					</div>
+			</aside>
+	
+		
+
+		
+		<section id="managment-players">
+			
+			<button id="add-player" class='btn-player new'><i class="fas fa-user-plus"></i>Dodaj gracza</button>	
+			<button id="del-player" class='btn-player rmv'><i class="fas fa-user-minus"></i>Usuń gracza</button>
+			<form id="new-player-form" class="hide" metod="get" action="#"  >
+				<h2>Nowy użytkownik</h2>
+				<input type="text" name="firstName" placeholder="Imię">
+				<input type="text" name="lastName" placeholder="Nazwisko">
+				<button id="confirm-add-player">Ok</button>
+			</form>
+		</section>
+		
+		<button id="show-managment-round">Rozgrywka</button>
+		
+		<section id="managment-round" class="hide">
+				<div class="managment-round-content">
+					<form id="save-round-form">
+						<button class="close"><i class="fas fa-times"></i></button>
+						<h2>Punktacja</h2>
+						<select name="holes" id="choice-hole">
+							<option value="d1">dołek 1</option>
+							<option value="d2">dołek 2</option>
+							<option value="d3">dołek 3</option>
+							<option value="d4">dołek 4</option>
+							<option value="d5">dołek 5</option>
+							<option value="d6">dołek 6</option>
+							<option value="d7">dołek 7</option>
+							<option value="d8">dołek 8</option>
+							<option value="d9">dołek 9</option>
+							<option value="d10">dołek 10</option>
+							<option value="d11">dołek 11</option>
+							<option value="d12">dołek 12</option>
+						</select>
+						<div class="container-player">		
+								
+						</div>	
+						<button type="submit" id="save-round">Zapisz</button>
+					</form>
+				</div>
+				
+		</section>
+		
+		
+	</main>
+
+
+	<!-- Main scripts-->
+	<script src="js/main.js"></script>
+</body>
+
+</html>
